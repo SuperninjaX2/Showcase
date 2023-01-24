@@ -1,0 +1,112 @@
+@font-face {
+  font-family: head;
+  src: url("font/Oswald.ttf");
+}
+@font-face {
+  font-family: light;
+  src: url("font/Oswald-light.ttf");
+}
+  
+@font-face {
+  font-family: hand;
+  src: url("font/Italic.ttf");
+}
+@font-face {
+  font-family: sans;
+  src: url("font/Courgette-Regular.ttf");
+}
+body{
+  background: black;
+  max-width: 100vw;
+}
+.box{
+  height: auto;
+ width: 100vw;
+  display: grid;
+  place-items: center;
+}
+header{
+  height: 100vh;
+}
+.heading{
+  color:white;
+  font-size: 2.9rem;
+  font-family: sans;
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.fade{
+  opacity: 0;
+  transition: all 2s;
+}
+.subHeading{
+  font-family: light;
+  color: white ;
+  font-style: 2rem;
+}
+.logo{
+  width: 7%;
+}
+.paragraph{
+  color:grey;
+  font-family: hand;
+}
+#company{
+  font-family: head;
+  text-align: center;
+  font-size: 5rem;
+  text-shadow: grey;
+  color: transparent;
+  background-image: url("imgs/boot.png");
+  background-clip:text;
+  -webkit-background-clip: text;
+  background-size: cover;
+}
+#comments{
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-color: lightblue;
+  font-size: 0.3rem;
+  font-family: hand;
+  color: white;
+  background: transparent;
+  
+}
+
+.footer{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.layer{
+    background-image: url("imgs/footer.svg");
+}
+/* scroll animation.box.*/
+.show{
+  color: white;
+  opacity: 1;
+  
+}
+
+@keyframes flash{
+  0%{
+    color: red;
+  }
+  15%{
+    color: blue;
+  }
+  25%{
+    color: yellow;
+  }
+  50%{
+    color: green;
+  }
+  75%{
+    color: gold;
+  }
+  100%{
+    color: black
+  }
+}

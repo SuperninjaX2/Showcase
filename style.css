@@ -16,32 +16,26 @@
   src: url("font/Courgette-Regular.ttf");
 }
 body{
-  background: black;
+
   max-width: 100vw;
-}
-.box{
-  height: auto;
- width: 100vw;
-  display: grid;
-  place-items: center;
 }
 header{
   height: 100vh;
 }
 .heading{
   color:white;
-  font-size: 2.9rem;
+  font-size: 3.2rem;
   font-family: sans;
   animation-name: flash;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-duration: 4s;
+
 }
-.fade{
+.cite{
   opacity: 0;
-  transition: all 2s;
+  transition: all 4s;
 }
 .subHeading{
-  font-family: light;
+  font-family: head;
   color: white ;
   font-style: 2rem;
 }
@@ -49,8 +43,13 @@ header{
   width: 7%;
 }
 .paragraph{
-  color:grey;
+  color:white;
   font-family: hand;
+  text-align: left;
+  font-size: 0.9rem;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-radius:5px ;
 }
 #company{
   font-family: head;
@@ -58,10 +57,11 @@ header{
   font-size: 5rem;
   text-shadow: grey;
   color: transparent;
-  background-image: url("imgs/boot.png");
+  background-image: url("imgs/text.jpg");
   background-clip:text;
   -webkit-background-clip: text;
   background-size: cover;
+  aspect-ratio:16/4;
 }
 #comments{
   border-left-width: 5px;
@@ -73,40 +73,76 @@ header{
   background: transparent;
   
 }
+img{
+  width: 100vw;
+  ;
+}
 
-.footer{
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-}
-.layer{
-    background-image: url("imgs/footer.svg");
-}
 /* scroll animation.box.*/
 .show{
-  color: white;
+  
   opacity: 1;
   
 }
 
-@keyframes flash{
-  0%{
-    color: red;
+@keyframes flash
+{
+  from{
+    font-size: 1.0rem;
   }
-  15%{
-    color: blue;
+  to{
+    font-style: 3.2rem;
   }
-  25%{
-    color: yellow;
+}
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* rtl:end:remove */
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
-  50%{
-    color: green;
+
+  .featurette-heading {
+    font-size: 50px;
   }
-  75%{
-    color: gold;
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
   }
-  100%{
-    color: black
-  }
+}
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -40px;
+  left: 19px;
 }

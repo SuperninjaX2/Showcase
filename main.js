@@ -8,8 +8,6 @@ const observer = new IntersectionObserver((entries) => {
     }
   })
 })
-const hidden = document.querySelectorAll('.fade');
+const hidden = document.querySelectorAll('.cite ');
 hidden.forEach((el) => observer.observe(el));
 
-const scroll = document.querySelectorAll('.scroll');
-hidden.forEach((el) => observer.observe(el));
